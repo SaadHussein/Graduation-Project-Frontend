@@ -82,6 +82,9 @@ const InformationForm = () => {
         fitness_goals: values.fitnessGoal,
         fitness_level: values.fitnessLevel,
         exercise_preferences: values.exercisePreferences,
+        days_available: values.daysAvailablePerWeek,
+        time_per_session_mins: values.timeForSessionInMintues,
+        gym_equipment: values.gymEquipment,
       })
       .eq("id", user?.id);
 
