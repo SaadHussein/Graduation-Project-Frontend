@@ -90,7 +90,7 @@ const InformationForm = () => {
 
     if (error === null) {
       console.log(error);
-      router.push("/profilePage");
+      router.push("/dashboard");
     }
   }
   return (

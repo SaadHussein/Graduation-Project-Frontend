@@ -25,7 +25,7 @@ const SignIn = () => {
       }
 
       console.log(data);
-      router.push("/profilePage");
+      router.push("/dashboard");
     } catch (error) {
       alert("There is Error;");
     }
