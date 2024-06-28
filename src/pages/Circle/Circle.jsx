@@ -12,6 +12,15 @@ const Circle = ({ socket }) => {
 
 	useEffect(() => {
 		if (socket !== null) {
+			socket.on("getMessages", ({ messages }) => {
+				setMessages(messages);
+			});
+			socket.emit("getMessages", { token, circleID: params.id });
+		}
+	}, [socket]);
+
+	useEffect(() => {
+		if (socket !== null) {
 			socket.on("messages", ({ messages }) => {
 				setMessages([...messages]);
 			});
